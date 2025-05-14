@@ -123,7 +123,7 @@
                     z-index: 120;
                     width: 60vw;
                     height: 500vh;
-                    padding: 5px;
+                    padding: 55px;
                     display: block;
                     background-color: #f1f517;
                     opacity: 0;
@@ -138,14 +138,14 @@
 
                         .menuLinks{
                             display: block;
-                            margin: 20px 15px;
-                            padding: 15px;
+                            margin: 55px 0px;
+                            padding: 10px;
                             text-align: center;
                             z-index: 115;
 
-                            .li{
-                                padding: 25px;
-                                margin: 55px;
+                            li{
+                                padding: 15px;
+                                margin: 25px 15px;
                                 border-radius: 25px;
                         
                                 &:hover{
@@ -156,11 +156,12 @@
 
                         .socialLinks {
                             display: flex;
-                            padding: 5px;
+                            padding: 15px;
                             text-align: center;
+                            //margin: 80px 55px;
                     
                             li{
-                                padding: 5px;
+                                padding: 15px;
                             }
                     
                         }

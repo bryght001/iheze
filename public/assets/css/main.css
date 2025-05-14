@@ -115,7 +115,7 @@ body {
     z-index: 120;
     width: 60vw;
     height: 500vh;
-    padding: 5px;
+    padding: 55px;
     display: block;
     background-color: #f1f517;
     opacity: 0;
@@ -128,26 +128,26 @@ body {
   }
   .menuNavigation .menulinksContainer .headerLinks .menuLinks {
     display: block;
-    margin: 20px 15px;
-    padding: 15px;
+    margin: 55px 0px;
+    padding: 10px;
     text-align: center;
     z-index: 115;
   }
-  .menuNavigation .menulinksContainer .headerLinks .menuLinks .li {
-    padding: 25px;
-    margin: 55px;
+  .menuNavigation .menulinksContainer .headerLinks .menuLinks li {
+    padding: 15px;
+    margin: 25px 15px;
     border-radius: 25px;
   }
-  .menuNavigation .menulinksContainer .headerLinks .menuLinks .li:hover {
+  .menuNavigation .menulinksContainer .headerLinks .menuLinks li:hover {
     background-color: #d11313;
   }
   .menuNavigation .menulinksContainer .headerLinks .socialLinks {
     display: flex;
-    padding: 5px;
+    padding: 15px;
     text-align: center;
   }
   .menuNavigation .menulinksContainer .headerLinks .socialLinks li {
-    padding: 5px;
+    padding: 15px;
   }
 }
 @media (max-width: 992px) {
