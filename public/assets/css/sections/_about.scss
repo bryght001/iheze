@@ -1,0 +1,20 @@
+@use "../variablesAndResets" as vr;
+
+.aboutSection{
+    position: relative;
+    padding: 2rem 0;
+    text-align: center;
+    width: 100%;
+    height: auto;
+
+    p{
+        font-size: large;
+        margin-bottom: 2rem;
+    }
+
+   
+    .aboutContainer{
+        height: 100%;
+
+    }
+}

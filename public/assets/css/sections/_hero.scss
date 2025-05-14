@@ -1,0 +1,77 @@
+@use "../variablesAndResets" as vr;
+
+.heroSection{
+    position: relative;
+    background-color: #f1f517;
+    padding: 2rem 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+
+    // Shadow overlay
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5); // Semi-transparent black overlay
+        z-index: 3; // Ensure it sits above the image but below the text
+    }
+
+    .heroContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        .heroimage{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+        }
+
+        .heroContent{
+            //position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 5;
+            color: #ffffff;
+            text-align: center;
+
+            h1{
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+
+            p{
+                font-size: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .heroButton{
+                background-color: #fff;
+                color: #000;
+                padding: 1rem 2rem;
+                border-radius: 5px;
+                text-decoration: none;
+                font-size: 1.2rem;
+
+                &:hover{
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+        }
+
+    }
+}
