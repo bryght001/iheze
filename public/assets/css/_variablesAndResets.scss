@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
 $mainTextColor: #000;
 $menuNavBgColor: #f1f1f173;
 
@@ -19,7 +21,7 @@ $brkpoints:(
 }
 
 body{
-    font-family:system-ui, 'Times New Roman', Times, serif;
+    font-family: "Roboto Flex", sans-serif, system-ui;
     font-size:medium;
     font-weight: 500;
     color: $mainTextColor;

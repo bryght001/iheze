@@ -39,14 +39,30 @@
         font-weight: 800;
         font-size: medium;
         margin-right: 10px;
+
+        & a:hover{
+            color: #eb0f0f;
+            font-size: 20px;
+        }
+
+        @include vr.brkpoint(md){
+            fmargin: 0;
+        }
     }
+
+        @include vr.brkpoint(md){
+            padding: 20px 15px;
+            margin: 0 auto;
+            width: 100%;
+            justify-content: space-between;
+        }
+
 
 
     .headerLinks{ 
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding: 10px;
 
 
 
@@ -100,11 +116,14 @@
             }
 
 
-                @include vr.brkpoint(xs){
+                @include vr.brkpoint(md){
                     position: absolute;
                     right: 0;
                     top: 0;
                     z-index: 120;
+                    width: 60vw;
+                    height: 500vh;
+                    padding: 5px;
                     display: block;
                     background-color: #f1f517;
                     opacity: 0;
@@ -119,10 +138,8 @@
 
                         .menuLinks{
                             display: block;
-                            margin: 0;
+                            margin: 20px 15px;
                             padding: 15px;
-                            width: 60vw;
-                            height: 100vh;
                             text-align: center;
                             z-index: 115;
 
@@ -151,123 +168,12 @@
                     }
 
 
-                @include vr.brkpoint(sm){
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    z-index: 150;
-                    display: block;
-                    background-color: #f1f517;
-                    opacity: 0;
-                    transform: translateY(-10px);
-                    pointer-events: none;
-                    transition: opacity 0.3s ease, transform 0.3s ease;
-
-                    .menuclose{
-                            opacity: 1;
-                        }
-
-
-                    .menuLinks{
-                        display: block;
-                        margin: 0;
-                        padding: 15px;
-                        width: 60vw;
-                        height: 100vh;
-                        text-align: center;
-                        z-index: 115;
-
-                        .li{
-                            padding: 25px;
-                            margin: 55px;
-                            border-radius: 25px;
-                    
-                            &:hover{
-                            background-color: #d11313;
-                            }
-                        }
-                    }
-
-                    .socialLinks {
-                        display: flex;
-                        padding: 5px;
-                        text-align: center;
-                
-                        li{
-                            padding: 5px;
-                        }
-                
-                    }
-                
-                }
-
-                @include vr.brkpoint(md){
-                    position: absolute;
-                    right: 0;
-                    top: 0;
-                    z-index: 150;
-                    display: block;
-                    background-color: #f1f517;
-                    opacity: 0;
-                    transform: translateY(-10px);
-                    pointer-events: none;
-                    transition: opacity 0.3s ease, transform 0.3s ease;
-
-                    
-                    .menuclose{
-                            opacity: 1;
-                        }
-
-
-
-                    .menuLinks{
-                        display: block;
-                        margin: 0;
-                        padding: 15px;
-                        width: 60vw;
-                        height: 100vh;
-                        text-align: center;
-                        z-index: 115;
-
-                    .li{
-                        padding: 25px;
-                        margin: 55px;
-                        border-radius: 25px;
-                
-                        &:hover{
-                        background-color: #d11313;
-                        }
-                    }
-                }
-
-                    .socialLinks {
-                        display: flex;
-                        padding: 5px;
-                        text-align: center;
-                
-                        li{
-                            padding: 5px;
-                        }
-                
-                    }
-                
-                }
+               
     }
 
 
             .headerLinks.show {
-                 @include vr.brkpoint(xs){
-                        opacity: 1;
-                        transform: translateY(0);
-                        pointer-events: auto;
-                      }
 
-                @include vr.brkpoint(sm){
-                        opacity: 1;
-                        transform: translateY(0);
-                        pointer-events: auto;
-                      }
-                
                 @include vr.brkpoint(md){
                         opacity: 1;
                         transform: translateY(0);
@@ -280,8 +186,8 @@
     
     .menuToggle{
         display: none;
-        margin: 0 10px;
-        padding: 5px;
+        margin: 10 10px;
+        padding: 15px;
         font-size: larger;
         cursor: pointer;
         color: vr.$mainTextColor;
@@ -291,20 +197,6 @@
             background-color: #d11313;
         }
 
-        @include vr.brkpoint(xs){
-            display: block;
-            position: absolute;
-            right: 0;
-            top: 0;
-            //z-index: 150;
-        }
-        @include vr.brkpoint(sm){
-            display: block;
-            position: absolute;
-            right: 0;
-            top: 0;
-           // z-index: 150;
-        }
         @include vr.brkpoint(md){
             display: block;
             position: absolute;
