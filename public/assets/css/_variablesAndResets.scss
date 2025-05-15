@@ -38,7 +38,7 @@ body{
     @include brkpoint(md){
         &.no-scroll{
             overflow: hidden;
-            height: 100vh;
+            height: 50vh;
         }
     }
 
