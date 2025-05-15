@@ -217,6 +217,13 @@ body {
   padding: 10rem;
   overflow: hidden;
 }
+@media (max-width: 992px) {
+  .heroSection .heroContainer {
+    flex-direction: column;
+    padding: 15px;
+    height: 100vh;
+  }
+}
 .heroSection .heroContainer .heroimage {
   width: 100%;
   height: 100%;
@@ -224,6 +231,14 @@ body {
      object-fit: cover;
   -o-object-position: left center;
      object-position: left center;
+}
+@media (max-width: 992px) {
+  .heroSection .heroContainer .heroimage {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 .heroSection .heroContainer .heroContent {
   z-index: 5;

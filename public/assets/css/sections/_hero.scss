@@ -32,11 +32,25 @@
         padding: 10rem;
         overflow: hidden;
 
+
+        @include vr.brkpoint(md){
+            flex-direction: column;
+            padding: 15px;
+            height: 100vh;
+        }
+
         .heroimage{
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: left center;
+
+            @include vr.brkpoint(md){
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                //object-position: left center;
+            }
         }
 
         .heroContent{
@@ -88,6 +102,8 @@
                 }
             }
         }
+
+        
 
     }
 }
