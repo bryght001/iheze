@@ -238,6 +238,9 @@ body {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+    margin-top: 100px;
+    -o-object-position: left center;
+       object-position: left center;
   }
 }
 .heroSection .heroContainer .heroContent {
