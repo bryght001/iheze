@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
 
 $mainTextColor: #000;
-$menuNavBgColor: #f1f1f173;
+$menuNavBgColor: #efefef;
 
 //screen breakpoints
 $brkpoints:(
@@ -12,6 +12,15 @@ $brkpoints:(
     xl: 1600px
 );
 
+@mixin brkpoint($brkpoint){
+    @if map-has-key($brkpoints, $brkpoint){
+    @media (max-width: map-get($brkpoints, $brkpoint)){
+        @content;
+    }}
+    @else{
+        @warn "Invlid breakpoint: #{$brkpoints}.";
+    }
+}
 
 
 *{
@@ -25,14 +34,13 @@ body{
     font-size:medium;
     font-weight: 500;
     color: $mainTextColor;
+
+    @include brkpoint(md){
+        &.no-scroll{
+            overflow: hidden;
+            height: 100vh;
+        }
+    }
+
 }
 
-@mixin brkpoint($brkpoint){
-    @if map-has-key($brkpoints, $brkpoint){
-    @media (max-width: map-get($brkpoints, $brkpoint)){
-        @content;
-    }}
-    @else{
-        @warn "Invlid breakpoint: #{$brkpoints}.";
-    }
-}
