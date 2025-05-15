@@ -287,10 +287,15 @@ body {
 
 .aboutSection {
   position: relative;
-  padding: 2rem 0;
+  padding: 15px;
   text-align: center;
   width: 100%;
   height: auto;
+}
+.aboutSection h3 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 .aboutSection p {
   font-size: large;
