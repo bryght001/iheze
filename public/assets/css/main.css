@@ -298,6 +298,7 @@ body {
   margin-bottom: 1rem;
 }
 .aboutSection p {
+  padding: 2px;
   font-size: large;
   margin-bottom: 2rem;
 }
