@@ -26,3 +26,26 @@ document.addEventListener("click", (event) => {
     document.body.classList.remove('no-scroll');
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("testimonialModal");
+  const modalImg = document.getElementById("modalImg");
+  const closeModal = document.getElementById("closeModal");
+  document.querySelectorAll(".testimonialscreenshots img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.classList.add("active");
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+    });
+  });
+  closeModal.addEventListener("click", () => {
+    modal.classList.remove("active");
+    modalImg.src = "";
+  });
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("active");
+      modalImg.src = "";
+    }
+  });
+});

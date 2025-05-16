@@ -1,17 +1,12 @@
-$primary-color: #2a2a72;
-$secondary-color: #f5f6fa;
-$text-color: #222;
-$accent-color: #ff6f61;
-$border-radius: 12px;
-$box-shadow: 0 4px 16px rgba(42, 42, 114, 0.08);
+@use "../variablesAndResets" as vr;
 
 .aboutSection {
-  background: $secondary-color;
+  background: vr.$secondary-color;
   padding: 2.5rem 1rem;
-  color: $text-color;
+  color: vr.$text-color;
 
   h3 {
-    color: $primary-color;
+    color: vr.$primary-color;
     font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
@@ -25,8 +20,8 @@ $box-shadow: 0 4px 16px rgba(42, 42, 114, 0.08);
     max-width: 1000px;
     margin: 0 auto;
     background: #fff;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow;
+    border-radius: vr.$border-radius;
+    box-shadow: vr.$box-shadow;
     padding: 2rem 1.2rem;
   }
 
@@ -36,7 +31,7 @@ $box-shadow: 0 4px 16px rgba(42, 42, 114, 0.08);
       font-size: 1.08rem;
       line-height: 1.7;
       margin-bottom: 1.2rem;
-      color: $text-color;
+      color: vr.$text-color;
       text-align: left;
     }
   }
