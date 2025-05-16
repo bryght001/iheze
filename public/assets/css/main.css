@@ -10,6 +10,7 @@ body {
   font-size: medium;
   font-weight: 500;
   color: #000;
+  overflow-x: hidden;
 }
 @media (max-width: 992px) {
   body.no-scroll {
@@ -192,6 +193,7 @@ body {
   padding: 0 15px;
   text-align: center;
   justify-content: center;
+  background-color: #ee0707;
   align-items: center;
   width: 100%;
   height: 90vh;
@@ -353,10 +355,8 @@ body {
 .portfolioSection .portfolioContainer {
   padding: 2rem;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
   width: 100%;
   height: auto;
 }
@@ -373,4 +373,25 @@ body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+.testimonialSection {
+  position: relative;
+  padding: 1rem 6rem;
+  background-color: #3f3c3c;
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.testimonialSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(53, 51, 51, 0.8);
+  z-index: 3;
 }/*# sourceMappingURL=main.css.map */
