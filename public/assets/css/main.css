@@ -238,7 +238,7 @@ body {
     height: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    margin-top: 60dvh;
+    margin-top: 45dvh;
     -o-object-position: left center;
        object-position: left center;
   }
