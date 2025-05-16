@@ -61,7 +61,7 @@
           cursor: pointer;
           transition: background 0.2s;
           &:hover {
-            background: vr.$primary-color;
+            background: vr.$accent-color;
           }
         }
       }
@@ -85,7 +85,7 @@
             font-size: 1.7rem;
             transition: color 0.2s;
             &:hover {
-              color: vr.$primary-color;
+              color: vr.$accent-color;
             }
           }
         }

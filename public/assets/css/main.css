@@ -651,7 +651,7 @@ body {
   transition: background 0.2s;
 }
 .contactSection .contactContainer .contactForm form .btn:hover {
-  background: #f13219;
+  background: #ff6f61;
 }
 .contactSection .contactContainer .footerContent {
   margin-top: 40px;
@@ -671,7 +671,7 @@ body {
   transition: color 0.2s;
 }
 .contactSection .contactContainer .footerContent .socialLinks li a:hover {
-  color: #f13219;
+  color: #ff6f61;
 }
 .contactSection .contactContainer .footerContent p {
   color: #888;
