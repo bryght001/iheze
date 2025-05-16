@@ -2,26 +2,47 @@
 
 .aboutSection{
     position: relative;
-    padding: 15px;
-    text-align: center;
+    padding: 1rem vr.$paddingMain;
     width: 100%;
     height: auto;
 
+    //make the about section to be full width 0n mobile with reduce padding
+    @include vr.brkpoint(md){
+        padding: 1rem;
+        width: 100%;
+        height: auto;
+    }
+
     h3{
-        font-family: "Bebas Neue", sans-serif;
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-
-    p{  
-        padding: 2px;
-        font-size: large;
-        margin-bottom: 2rem;
-    }
-
-   
+                    font-family: "Bebas Neue", sans-serif;
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                    text-align: center;
+                }
+  
     .aboutContainer{
-        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+         
+        .aboutone, .abouttwo{
+            padding: 2.5rem;
+
+                p{  
+                    font-size: large;
+                    margin-bottom: 2rem;
+                }
     }
+
+    //make the about section to be single column on mobile
+    @include vr.brkpoint(md){
+        flex-direction: column;
+        height: auto;
+
+        .aboutone, .abouttwo{
+            width: 100%;
+        }
+    }
+}
 }
