@@ -1,48 +1,68 @@
-@use "../variablesAndResets" as vr;
+$primary-color: #2a2a72;
+$secondary-color: #f5f6fa;
+$text-color: #222;
+$accent-color: #ff6f61;
+$border-radius: 12px;
+$box-shadow: 0 4px 16px rgba(42, 42, 114, 0.08);
 
-.aboutSection{
-    position: relative;
-    padding: 1rem vr.$paddingMain;
-    width: 100%;
-    height: auto;
+.aboutSection {
+  background: $secondary-color;
+  padding: 2.5rem 1rem;
+  color: $text-color;
 
-    //make the about section to be full width 0n mobile with reduce padding
-    @include vr.brkpoint(md){
-        padding: 1rem;
-        width: 100%;
-        height: auto;
+  h3 {
+    color: $primary-color;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+
+  .aboutContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: 2rem 1.2rem;
+  }
+
+  .aboutone,
+  .abouttwo {
+    p {
+      font-size: 1.08rem;
+      line-height: 1.7;
+      margin-bottom: 1.2rem;
+      color: $text-color;
+      text-align: left;
+    }
+  }
+
+  // Responsive styles
+  @media (min-width: 800px) {
+    .aboutContainer {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 3rem;
+      padding: 2.5rem 2.5rem;
     }
 
-    h3{
-                    font-family: "Bebas Neue", sans-serif;
-                    font-size: 2rem;
-                    margin-bottom: 1rem;
-                    text-align: center;
-                }
-  
-    .aboutContainer{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-         
-        .aboutone, .abouttwo{
-            padding: 2.5rem;
-
-                p{  
-                    font-size: large;
-                    margin-bottom: 2rem;
-                }
+    .aboutone,
+    .abouttwo {
+      flex: 1 1 0;
+      max-width: 48%;
     }
+  }
 
-    //make the about section to be single column on mobile
-    @include vr.brkpoint(md){
-        flex-direction: column;
-        height: auto;
+  @media (min-width: 1200px) {
+    padding: 4rem 0;
 
-        .aboutone, .abouttwo{
-            width: 100%;
-        }
+    .aboutContainer {
+      max-width: 1200px;
+      padding: 3rem 4rem;
     }
-}
+  }
 }

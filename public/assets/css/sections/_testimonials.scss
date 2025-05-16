@@ -1,26 +1,27 @@
 @use "../variablesAndResets" as vr;
 
-.testimonialSection{
-    //make the tesimonial section to have an image background with a dark overlay
+.testimonialSection {
+  position: relative;
+  padding: 1rem vr.$paddingMain;
+  width: 100%;
+  background-color: #3f3c3c;
+  background-image: url("../../imgs/testimonial-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(53, 51, 51, 0.8);
+    z-index: 1;
+  }
+
+  .testimonialContainer, .heroimage {
     position: relative;
-    padding: 1rem vr.$paddingMain;
-    background-color: #3f3c3c;
-    width: 100%;
-    height: auto;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(53, 51, 51, 0.8); // Semi-transparent black overlay and darken the image
-        //filter: blur(5px); //add blur to the image
-        z-index: 3; // Ensure it sits above the image but below the text
-    }
+    z-index: 2;
+  }
 }

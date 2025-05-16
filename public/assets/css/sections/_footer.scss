@@ -1,0 +1,100 @@
+@use "../variablesAndResets" as vr;
+
+.contactSection {
+  background: #f9f9fb;
+  padding: 60px 0;
+
+  .contactContainer {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+    padding: 40px 30px;
+
+    h2 {
+      text-align: center;
+      margin-bottom: 32px;
+      color: #1a1a1a;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .contactForm {
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .formGroup {
+          display: flex;
+          flex-direction: column;
+          label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+          }
+          input, textarea {
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border 0.2s;
+            &:focus {
+              border-color: #4f8cff;
+              outline: none;
+            }
+          }
+          textarea {
+            resize: vertical;
+          }
+        }
+
+        .btn {
+          background: #4f8cff;
+          color: #fff;
+          border: none;
+          border-radius: 6px;
+          padding: 12px 0;
+          font-size: 1.1rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: background 0.2s;
+          &:hover {
+            background: #2563eb;
+          }
+        }
+      }
+    }
+
+    .footerContent {
+      margin-top: 40px;
+      text-align: center;
+
+      .socialLinks {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        margin-bottom: 16px;
+        list-style: none;
+        padding: 0;
+
+        li {
+          a {
+            color: #4f8cff;
+            font-size: 1.7rem;
+            transition: color 0.2s;
+            &:hover {
+              color: #2563eb;
+            }
+          }
+        }
+      }
+
+      p {
+        color: #888;
+        font-size: 0.95rem;
+      }
+    }
+  }
+}

@@ -331,59 +331,114 @@ body {
 }
 
 .portfolioSection {
-  padding: 1rem 6rem;
-  background-color: #fcec0d;
+  background: #f5f6fa;
+  padding: 2rem 1rem;
+  color: #222;
 }
 .portfolioSection h3 {
-  font-family: "Bebas Neue", sans-serif;
+  color: #2a2a72;
   font-size: 2rem;
   margin-bottom: 1rem;
   text-align: center;
 }
 .portfolioSection p {
+  max-width: 700px;
+  margin: 0.5rem auto;
+  line-height: 1.6;
   text-align: center;
-  font-size: large;
-  margin-bottom: 2rem;
-}
-@media (max-width: 992px) {
-  .portfolioSection {
-    padding: 1rem;
-    width: 100%;
-    height: auto;
-  }
 }
 .portfolioSection .portfolioContainer {
-  padding: 2rem;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  padding: 0 1rem;
+}
+.portfolioSection .portfolioItems {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(42, 42, 114, 0.08);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: auto;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
-.portfolioSection .portfolioContainer .portfolioItems {
-  padding: 2rem;
-  background-color: #ffffff;
-  border-radius: 1rem;
-  transition: all 0.3s ease-in-out;
+.portfolioSection .portfolioItems:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(42, 42, 114, 0.15);
 }
-.portfolioSection .portfolioContainer .portfolioItems img {
+.portfolioSection .portfolioItems img {
   width: 100%;
-  height: 100%;
+  max-width: 320px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  box-shadow: 0 2px 8px rgba(42, 42, 114, 0.07);
+}
+.portfolioSection .portfolioItems h3 {
+  font-size: 1.2rem;
+  color: #ff6f61;
+  margin: 0.5rem 0 1rem 0;
+  text-align: center;
+}
+.portfolioSection .portfolioItems p {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+.portfolioSection .portfolioItems .btn {
+  background: #2a2a72;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+.portfolioSection .portfolioItems .btn:hover {
+  background: #ff6f61;
+}
+@media (min-width: 700px) {
+  .portfolioSection .portfolioContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+  }
+  .portfolioSection .portfolioItems {
+    flex: 1 1 320px;
+    max-width: 340px;
+    min-width: 280px;
+    margin: 0;
+  }
+}
+@media (min-width: 1100px) {
+  .portfolioSection {
+    padding: 4rem 0;
+  }
+  .portfolioSection .portfolioContainer {
+    gap: 2.5rem;
+  }
+  .portfolioSection .portfolioItems {
+    padding: 2rem 1.5rem;
+  }
 }
 
 .testimonialSection {
   position: relative;
   padding: 1rem 6rem;
-  background-color: #3f3c3c;
   width: 100%;
-  height: auto;
+  background-color: #3f3c3c;
+  background-image: url("../../imgs/testimonial-bg.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 .testimonialSection::before {
   content: "";
@@ -393,5 +448,95 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(53, 51, 51, 0.8);
-  z-index: 3;
+  z-index: 1;
+}
+.testimonialSection .testimonialContainer, .testimonialSection .heroimage {
+  position: relative;
+  z-index: 2;
+}
+
+.contactSection {
+  background: #f9f9fb;
+  padding: 60px 0;
+}
+.contactSection .contactContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.07);
+  padding: 40px 30px;
+}
+.contactSection .contactContainer h2 {
+  text-align: center;
+  margin-bottom: 32px;
+  color: #1a1a1a;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.contactSection .contactContainer .contactForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.contactSection .contactContainer .contactForm form .formGroup {
+  display: flex;
+  flex-direction: column;
+}
+.contactSection .contactContainer .contactForm form .formGroup label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+.contactSection .contactContainer .contactForm form .formGroup input, .contactSection .contactContainer .contactForm form .formGroup textarea {
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.2s;
+}
+.contactSection .contactContainer .contactForm form .formGroup input:focus, .contactSection .contactContainer .contactForm form .formGroup textarea:focus {
+  border-color: #4f8cff;
+  outline: none;
+}
+.contactSection .contactContainer .contactForm form .formGroup textarea {
+  resize: vertical;
+}
+.contactSection .contactContainer .contactForm form .btn {
+  background: #4f8cff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.contactSection .contactContainer .contactForm form .btn:hover {
+  background: #2563eb;
+}
+.contactSection .contactContainer .footerContent {
+  margin-top: 40px;
+  text-align: center;
+}
+.contactSection .contactContainer .footerContent .socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 16px;
+  list-style: none;
+  padding: 0;
+}
+.contactSection .contactContainer .footerContent .socialLinks li a {
+  color: #4f8cff;
+  font-size: 1.7rem;
+  transition: color 0.2s;
+}
+.contactSection .contactContainer .footerContent .socialLinks li a:hover {
+  color: #2563eb;
+}
+.contactSection .contactContainer .footerContent p {
+  color: #888;
+  font-size: 0.95rem;
 }/*# sourceMappingURL=main.css.map */

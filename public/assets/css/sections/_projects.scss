@@ -1,58 +1,118 @@
-@use "../variablesAndResets" as vr;
+$primary-color: #2a2a72;
+$secondary-color: #f5f6fa;
+$accent-color: #ff6f61;
+$text-color: #222;
+$border-radius: 12px;
+$box-shadow: 0 4px 16px rgba(42, 42, 114, 0.08);
 
-.portfolioSection{  
-    padding: 1rem vr.$paddingMain;
-    background-color: #fcec0d;
+.portfolioSection {
+  background: $secondary-color;
+  padding: 2rem 1rem;
+  color: $text-color;
 
+  h3 {
+    color: $primary-color;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
 
+  p {
+    max-width: 700px;
+    margin: 0.5rem auto;
+    line-height: 1.6;
+    text-align: center;
+  }
 
+  .portfolioContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem auto;
+    max-width: 1100px;
+    padding: 0 1rem;
+  }
 
-             h3{
-                    font-family: "Bebas Neue", sans-serif;
-                    font-size: 2rem;
-                    margin-bottom: 1rem;
-                    text-align: center;
-                }
+  .portfolioItems {
+    background: #fff;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
 
-                p{  
-                    text-align: center;
-                    font-size: large;
-                    margin-bottom: 2rem;
-                }
-
-        @include vr.brkpoint(md){
-          padding: 1rem;
-          width: 100%;
-          height: auto;
-      }
-
-.portfolioContainer{
-      padding: 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      //make all divs tobe same width irrespective of content size and make it flexible
-      //flex-wrap: wrap;
-      //gap: 2rem;
-      width: 100%;
-      height: auto;
-      
-
-    .portfolioItems{
-        padding: 2rem;
-        //make each items a card with grey background and shadow
-        background-color: #ffffff;
-        border-radius: 1rem;
-        //box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        transition: all 0.3s ease-in-out;
-
-        img{
-            //restrict the image to be 100% of the parent container
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-        }
+    &:hover {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 8px 24px rgba(42, 42, 114, 0.15);
     }
-}
+
+    img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: $border-radius;
+      margin-bottom: 1rem;
+      object-fit: cover;
+      box-shadow: 0 2px 8px rgba(42, 42, 114, 0.07);
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      color: $accent-color;
+      margin: 0.5rem 0 1rem 0;
+      text-align: center;
+    }
+
+    p {
+      font-size: 1rem;
+      color: $text-color;
+      margin-bottom: 1.2rem;
+      text-align: left;
+    }
+
+    .btn {
+      background: $primary-color;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+
+      &:hover {
+        background: $accent-color;
+      }
+    }
+  }
+
+  // Responsive styles
+  @media (min-width: 700px) {
+    .portfolioContainer {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+    }
+
+    .portfolioItems {
+      flex: 1 1 320px;
+      max-width: 340px;
+      min-width: 280px;
+      margin: 0;
+    }
+  }
+
+  @media (min-width: 1100px) {
+    padding: 4rem 0;
+
+    .portfolioContainer {
+      gap: 2.5rem;
+    }
+
+    .portfolioItems {
+      padding: 2rem 1.5rem;
+    }
+  }
 }
