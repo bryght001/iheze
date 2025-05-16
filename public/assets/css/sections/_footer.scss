@@ -41,7 +41,7 @@
             font-size: 1rem;
             transition: border 0.2s;
             &:focus {
-              border-color: #4f8cff;
+              border-color: vr.$primary-color;
               outline: none;
             }
           }
@@ -51,7 +51,7 @@
         }
 
         .btn {
-          background: #4f8cff;
+          background: vr.$primary-color;
           color: #fff;
           border: none;
           border-radius: 6px;
@@ -61,7 +61,7 @@
           cursor: pointer;
           transition: background 0.2s;
           &:hover {
-            background: #2563eb;
+            background: vr.$primary-color;
           }
         }
       }
@@ -81,11 +81,11 @@
 
         li {
           a {
-            color: #4f8cff;
+            color: vr.$primary-color;
             font-size: 1.7rem;
             transition: color 0.2s;
             &:hover {
-              color: #2563eb;
+              color: vr.$primary-color;
             }
           }
         }
