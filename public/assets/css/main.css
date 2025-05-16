@@ -34,22 +34,6 @@ body {
     transform: translateY(0) scale(1);
   }
 }
-.autoblur {
-  animation: autoblurAnimation both;
-  animation-timeline: view();
-}
-
-@keyframes autoblurAnimation {
-  0% {
-    filter: blur(40px);
-  }
-  40%, 55% {
-    filter: blur(0px);
-  }
-  100% {
-    filter: blur(40px);
-  }
-}
 .menuNavigation {
   position: relative;
 }
