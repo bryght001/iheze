@@ -65,11 +65,11 @@
       @include vr.brkpoint(md) {
         position: static;
         width: 100%;
-        height: 220px;
+        height: 200px;
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 0.5rem;
         filter: brightness(0.85) blur(0.5px);
-        border-radius: 12px;
+        border-radius: 5px;
         display: block;
         z-index: 1;
         //filter: brightness(0.6) blur(2px);
@@ -137,7 +137,7 @@
         max-width: 70vw;
         gap: 1.5rem;
         //margin: 0 auto;
-        padding: 1rem 0.5rem;
+        padding: 1rem 0.95rem;
         //max-width: 98vw;
         //text-align: center;
 
