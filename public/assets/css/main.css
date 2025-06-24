@@ -278,7 +278,6 @@ body {
     border-radius: 12px;
     display: block;
     z-index: 1;
-    filter: brightness(0.6) blur(2px);
   }
 }
 .heroSection .heroContainer .heroContent {
@@ -336,7 +335,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     min-height: 30vh;
-    max-width: 90vw;
+    max-width: 70vw;
     gap: 1.5rem;
     padding: 1rem 0.5rem;
   }
