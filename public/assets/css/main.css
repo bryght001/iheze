@@ -224,6 +224,12 @@ body {
   pointer-events: none;
   transition: background 0.3s;
 }
+@media (max-width: 992px) {
+  .heroSection::before {
+    min-height: 40vh;
+    padding: 2rem 1rem;
+  }
+}
 .heroSection .heroContainer {
   position: relative;
   display: flex;
@@ -263,6 +269,15 @@ body {
 }
 @media (max-width: 992px) {
   .heroSection .heroContainer .heroimage {
+    position: static;
+    width: 100%;
+    height: 220px;
+    margin-top: 0;
+    margin-bottom: 0;
+    filter: brightness(0.85) blur(0.5px);
+    border-radius: 12px;
+    display: block;
+    z-index: 1;
     filter: brightness(0.6) blur(2px);
   }
 }
@@ -317,20 +332,25 @@ body {
 }
 @media (max-width: 992px) {
   .heroSection .heroContainer .heroContent {
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    max-width: 98vw;
-    text-align: center;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 30vh;
+    max-width: 90vw;
+    gap: 1.5rem;
+    padding: 1rem 0.5rem;
   }
   .heroSection .heroContainer .heroContent h3 {
-    font-size: 2.1rem;
+    font-size: 1.3rem;
+    margin-bottom: 0.7rem;
   }
   .heroSection .heroContainer .heroContent p {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
   }
   .heroSection .heroContainer .heroContent .btn {
-    padding: 0.8rem 1.5rem;
-    font-size: 1.05rem;
+    padding: 0.6rem 1.1rem;
+    font-size: 0.95rem;
   }
 }
 
