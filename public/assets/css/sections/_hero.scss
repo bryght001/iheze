@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(120deg, #ee0707 60%, #cecb0d 100%);
+  background: #ee0707;
   padding: 0 0.5rem;
   overflow: hidden;
   z-index: 1;
@@ -17,7 +17,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(30, 30, 30, 0.65);
+    background: rgba(30, 30, 30, 0.35);
     z-index: 2;
     pointer-events: none;
     transition: background 0.3s;
@@ -106,14 +106,14 @@
       p {
         font-size: 1.4rem;
         margin-bottom: 2.2rem;
-        color: #ffb3b3;
+        color: #ee0d0d;
         font-weight: 500;
         text-shadow: 0 1px 4px rgba(0,0,0,0.12);
         line-height: 1.6;
       }
 
       .btn {
-        background: linear-gradient(90deg, #fff 60%, #ffb3b3 100%);
+        background: linear-gradient(90deg, #fff 60%, #e71111 100%);
         color: #ee0707;
         padding: 1rem 2.5rem;
         border-radius: 12px;
