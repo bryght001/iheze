@@ -1,12 +1,11 @@
 @use "../variablesAndResets" as vr;
 
 .portfolioSection {
-  background: vr.$secondary-color;
+  background: vr.$projectBgColor;
   padding: 2rem 1rem;
-  color: vr.$text-color;
+  color: vr.$projectTextColor;
 
   h3 {
-    color:vr.$primary-color;
     font-size: 2rem;
     margin-bottom: 1rem;
     text-align: center;

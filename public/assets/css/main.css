@@ -424,12 +424,11 @@ body {
 }
 
 .portfolioSection {
-  background: #f5f6fa;
+  background: #222;
   padding: 2rem 1rem;
-  color: #222;
+  color: #fff;
 }
 .portfolioSection h3 {
-  color: #f13219;
   font-size: 2rem;
   margin-bottom: 1rem;
   text-align: center;
